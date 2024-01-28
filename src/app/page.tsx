@@ -1,9 +1,33 @@
-import Image from "next/image";
+import PostCard from "@/components/Home/PostCard/PostCard";
 
-export default function Home() {
+const getData = async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
+
+  return res.json()
+}
+
+export default async function Home() {
+
+  const data = await getData();
+
+
   return (
-   <div className="max-h-screen flex justify-center">
-    <h1>Next JS 14 With TypeScript</h1>
+   <div className="min-h-screen">
+    <h1 className="text-center">Next JS 14 With TypeScript</h1>
+
+    <div className="my-4">
+    <h1 className="font-bold text-2xl underline">Post Section Start Here:</h1>
+    <div className="grid grid-cols-4">
+
+    {
+      data.map((post:{title: string, body: string, id: number, userId: number}) => <PostCard key={post.id} title={post.title} id={post.id} userId={post.userId} body={post.body}/>)
+    }
+
+    </div>
+    </div>
    </div>
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const AboutBanner = (props:{title: String}) => {
     return (
         <div className='grid min-h-screen justify-center'>

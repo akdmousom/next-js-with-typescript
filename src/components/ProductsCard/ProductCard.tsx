@@ -3,7 +3,7 @@ import Link from "next/link";
 const ProductCard = (props:{id: number, body: string, userId: number, title: string}) => {
 
     const Id = props.id
-    console.log(Id);
+  
     
    
     return (

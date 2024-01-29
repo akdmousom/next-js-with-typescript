@@ -20,7 +20,7 @@ export default async function Home() {
 
     <div className="my-4">
     <h1 className="font-bold text-2xl underline">Post Section Start Here:</h1>
-    <div className="grid grid-cols-4">
+    <div className="grid grid-cols-4 max-w-[1200px] mx-auto">
 
     {
       data.map((post:{title: string, body: string, id: number, userId: number}) => <PostCard key={post.id} title={post.title} id={post.id} userId={post.userId} body={post.body}/>)

@@ -11,7 +11,7 @@ const getData = async () => {
 
 export default async function Home() {
 
-  const data = await getData();
+  const data: PostDataType [] = await getData();
 
 
   return (

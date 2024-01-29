@@ -18,9 +18,9 @@ const page = async () => {
 
     }
 
-    const data = await getAllProduct();
+    const data: [] = await getAllProduct();
 
-    console.log(data);
+   
     
 
     return (

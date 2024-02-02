@@ -1,5 +1,5 @@
 import PostCard from "@/components/Home/PostCard/PostCard";
-import { title } from "process";
+
 
 const getData = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts')

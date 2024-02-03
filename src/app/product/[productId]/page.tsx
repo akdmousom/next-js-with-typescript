@@ -1,7 +1,3 @@
-import React, { ReactNode } from "react";
-
-
-
 const page = async ({params}:{
     params: {productId: number}
 }) => {
@@ -33,6 +29,7 @@ const page = async ({params}:{
             <div className="my-4">
                 <h1 className="text-2xl font-bold">{data?.title}</h1>
                 <p>{data?.body}</p>
+                <button></button>
             </div>
         </div>
     );

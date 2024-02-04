@@ -3,4 +3,8 @@ type PostDataType = {
     userId: number,
     title: string,
     body: string
+
 }
+
+
+
